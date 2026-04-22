@@ -52,7 +52,9 @@ La interoperabilidad tiene varias dimensiones.
 
 A nivel técnico, los sistemas deben poder intercambiar información mediante algún mecanismo. A nivel semántico, esa información debe significar lo mismo en ambos lados. Y a nivel de proceso, el intercambio debe encajar en el flujo de trabajo donde se utiliza.
 
-Muchos problemas no aparecen porque no exista conexión, sino porque lo que se intercambia no se interpreta igual, no llega con el contexto necesario o no se incorpora bien al circuito clínico correspondiente.## 3. Problemas reales de interoperabilidad
+Muchos problemas no aparecen porque no exista conexión, sino porque lo que se intercambia no se interpreta igual, no llega con el contexto necesario o no se incorpora bien al circuito clínico correspondiente.
+
+## 3. Problemas reales de interoperabilidad
 
 ### 3.1. Sistemas aislados
 
