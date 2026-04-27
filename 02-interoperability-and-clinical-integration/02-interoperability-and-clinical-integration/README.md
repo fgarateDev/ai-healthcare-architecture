@@ -313,3 +313,65 @@ En un escenario real, la calidad del resultado no depende solo de la lógica que
 También depende de que la mensajería llegue con consistencia, de que los mensajes puedan interpretarse bien, de que existan mecanismos para manejar errores y de que la información se vincule correctamente con el caso clínico correspondiente.
 
 Por eso, en sistemas como este, la interoperabilidad no es una capa secundaria: es parte central de la utilidad real del servicio.
+
+---
+
+## 7. Checklist mínimo
+
+### 7.1. Sistemas
+
+- [ ] Se han identificado los sistemas que generan, transforman y consumen la información relevante
+- [ ] Se conoce qué papel cumple cada sistema dentro del flujo
+- [ ] Se han localizado dependencias con sistemas legacy o componentes intermedios
+
+### 7.2. Flujos
+
+- [ ] Se ha definido qué información entra, desde dónde llega y hacia dónde debe salir
+- [ ] Se conoce la frecuencia esperada del intercambio
+- [ ] Se ha identificado qué partes del flujo son automáticas y cuáles dependen todavía de pasos manuales
+- [ ] Se ha revisado si la salida llega al punto adecuado del proceso clínico
+
+### 7.3. Mecanismos de intercambio
+
+- [ ] Se conoce qué mecanismo utiliza cada flujo: mensajería, motor de integración, base intermedia, API u otro
+- [ ] Se ha comprobado cómo está implementado realmente el intercambio, no solo qué estándar declara usar
+- [ ] Se han identificado limitaciones de formato, versión o convenciones locales
+- [ ] Se ha valorado el grado de dependencia respecto a conectores o adaptadores específicos
+
+### 7.4. Trazabilidad
+
+- [ ] Puede saberse qué sistema emitió cada información relevante
+- [ ] Puede reconstruirse, al menos de forma básica, el recorrido de la información
+- [ ] Se registran errores, fallos de procesamiento o incidencias relevantes
+- [ ] Existen mecanismos razonables para revisar qué ocurrió cuando el flujo no funciona como se esperaba
+
+### 7.5. Robustez y mantenibilidad
+
+- [ ] La integración no depende en exceso de supuestos frágiles o poco documentados
+- [ ] Se han considerado cambios previsibles en sistemas emisores o consumidores
+- [ ] Existen mecanismos para manejar errores, duplicados, mensajes incompletos o reintentos
+- [ ] Se ha evaluado si la latencia del flujo es compatible con el caso de uso
+- [ ] Se ha revisado cómo se vincula la información con el paciente, episodio, muestra o evento correcto
+
+---
+
+## 8. Referencias y enlaces de interés
+
+### 8.1. Estándares y marcos
+
+- HL7 Version 2 Product Suite  
+  https://www.hl7.org/implement/standards/product_brief.cfm?product_id=185
+
+- HL7 FHIR Overview  
+  https://www.hl7.org/fhir/overview.html
+
+- Integrating the Healthcare Enterprise (IHE)  
+  https://www.ihe.net/
+
+### 8.2. Recursos técnicos útiles
+
+- HL7 Messaging Standard — ejemplos, guías y documentación oficial de la familia HL7
+- Documentación del motor de integración que se utilice en el entorno real
+- Guías locales de integración, mapeos de mensajes y especificaciones de interfaces
+- Diagramas de flujo internos que ayuden a entender qué sistema emite, transforma y consume cada información
+
